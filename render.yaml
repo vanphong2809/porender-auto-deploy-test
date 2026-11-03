@@ -1,0 +1,18 @@
+services:
+  - type: web
+    name: auto-deploy-demo
+    runtime: node
+    autoDeploy: true
+    buildCommand: npm ci --ignore-scripts --no-audit --no-fund && npm run build
+    startCommand: npm start
+    healthCheckPath: /health
+    x-porender:
+      port: 10000
+      memoryMiB: 128
+      cpu: 0.25
+      healthTimeoutSeconds: 15
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BRAND_NAME
+        value: PoRender

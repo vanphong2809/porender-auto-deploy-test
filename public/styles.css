@@ -1,0 +1,256 @@
+:root {
+  color-scheme: light;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #171717;
+  background: #f8f8fa;
+  font-synthesis: none;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:focus-visible {
+  outline: 3px solid #8555ff;
+  outline-offset: 5px;
+}
+main {
+  width: min(100% - 64px, 960px);
+  margin: 0 auto;
+}
+header {
+  min-height: 104px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #dedee5;
+}
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 650;
+}
+.brand-mark {
+  display: grid;
+  place-items: center;
+  background: #7138ed;
+  color: white;
+  height: 32px;
+  width: 32px;
+  font-size: 27px;
+  border-radius: 7px;
+}
+#brand-logo {
+  max-width: 100px;
+  height: 32px;
+  object-fit: contain;
+}
+[hidden] {
+  display: none !important;
+}
+.tag,
+.eyebrow,
+dt,
+.step {
+  font:
+    11px/1.5 ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+  letter-spacing: 0.09em;
+}
+.tag {
+  color: #6c6876;
+}
+.hero {
+  padding: 64px 0 32px;
+}
+.eyebrow {
+  color: #7442d2;
+  margin: 0 0 20px;
+}
+h1 {
+  font-size: clamp(42px, 7vw, 64px);
+  font-weight: 600;
+  line-height: 1.05;
+  letter-spacing: -0.055em;
+  margin: 0 0 24px;
+}
+.intro {
+  max-width: 530px;
+  color: #676472;
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0;
+}
+.release {
+  border: 1px solid #dedee5;
+  border-radius: 14px;
+  background: white;
+  padding: 28px 32px 0;
+  box-shadow: 0 10px 35px #29203f05;
+}
+.release-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+h2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin: 0;
+}
+.status {
+  font-size: 12px;
+  border-radius: 30px;
+  background: #f1eff5;
+  padding: 6px 10px;
+  color: #686372;
+}
+.status.ok {
+  background: #e8f7ef;
+  color: #22754c;
+}
+.status.error {
+  background: #fff0ef;
+  color: #aa3b35;
+}
+.version {
+  color: #7138ed;
+  font-size: clamp(58px, 10vw, 88px);
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.06em;
+  margin-top: 24px;
+  overflow-wrap: anywhere;
+}
+.message {
+  font-size: 16px;
+  color: #55515f;
+  margin: 8px 0 28px;
+  overflow-wrap: anywhere;
+}
+.release-footer {
+  padding: 18px 0;
+  border-top: 1px solid #eae8ef;
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #77717e;
+}
+.details {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 0.7fr;
+  gap: 24px;
+  margin: 32px 0;
+  padding-bottom: 32px;
+  border-bottom: 1px solid #dedee5;
+}
+dt {
+  font-size: 10px;
+  color: #807a88;
+  margin-bottom: 9px;
+}
+dd {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+dd a,
+footer a {
+  color: #7138ed;
+}
+.next {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 0 0 28px;
+}
+.step {
+  color: #7138ed;
+  padding-top: 3px;
+  white-space: nowrap;
+}
+.next h2 {
+  margin-bottom: 12px;
+}
+code {
+  font:
+    13px ui-monospace,
+    SFMono-Regular,
+    Menlo,
+    monospace;
+  display: inline-block;
+  background: #ede9f5;
+  color: #5f329b;
+  padding: 10px 14px;
+  border-radius: 5px;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+.next p {
+  max-width: 550px;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #77717e;
+  margin-bottom: 0;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 24px 0 32px;
+  border-top: 1px solid #dedee5;
+  color: #8a8592;
+  font-size: 12px;
+}
+@media (max-width: 640px) {
+  main {
+    width: calc(100% - 32px);
+  }
+  header {
+    min-height: 80px;
+  }
+  .tag {
+    font-size: 9px;
+    max-width: 100px;
+    text-align: right;
+  }
+  .hero {
+    padding-top: 40px;
+  }
+  .release {
+    padding: 22px 20px 0;
+  }
+  .release-footer {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .details {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 16px;
+  }
+  .next {
+    flex-direction: column;
+    gap: 10px;
+  }
+  footer {
+    flex-direction: column;
+    gap: 12px;
+  }
+}

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A small application to verify Git push, automatic deployment, logs and rollback."
+    />
+    <title>Auto deploy test</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="/styles.css" />
+    <script type="module" src="/app.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <a class="brand" href="/" aria-label="Home"
+          ><span class="brand-mark" aria-hidden="true">↗</span
+          ><img id="brand-logo" alt="" hidden /><span id="brand-name"
+            >Deploy test</span
+          ></a
+        >
+        <span class="tag">AUTO DEPLOY DEMO</span>
+      </header>
+      <section class="hero">
+        <p class="eyebrow">YOUR GIT-TO-DEPLOY CHECK</p>
+        <h1>One push.<br />A new version.</h1>
+        <p class="intro">
+          Update the version, commit, and push. When deployment succeeds, this
+          page will show the new running version.
+        </p>
+      </section>
+      <section class="release" aria-labelledby="release-heading">
+        <div class="release-top">
+          <h2 id="release-heading">Running release</h2>
+          <span id="connection" class="status" role="status">Connecting…</span>
+        </div>
+        <div id="version" class="version" aria-live="polite">—</div>
+        <p id="message" class="message">Waiting for the application…</p>
+        <div class="release-footer">
+          <span id="mode">Checking deployment</span
+          ><span id="checked">Not checked yet</span>
+        </div>
+      </section>
+      <dl class="details">
+        <div>
+          <dt>DEPLOYMENT ID</dt>
+          <dd id="deployment">—</dd>
+        </div>
+        <div>
+          <dt>BUILT AT</dt>
+          <dd id="built">—</dd>
+        </div>
+        <div>
+          <dt>STARTED AT</dt>
+          <dd id="started">—</dd>
+        </div>
+        <div>
+          <dt>HEALTH ENDPOINT</dt>
+          <dd><a href="/health">/health ↗</a></dd>
+        </div>
+      </dl>
+      <section class="next">
+        <span class="step">01 → 02</span>
+        <div>
+          <h2>Ready to try V2?</h2>
+          <code>npm run set-version -- V2</code>
+          <p>
+            Commit <strong>version.json</strong>, then push to the connected
+            branch. The page checks the running release every 5 seconds.
+          </p>
+        </div>
+      </section>
+      <footer>
+        <span>Live metadata from this application.</span
+        ><a href="/api/version">View JSON ↗</a>
+      </footer>
+    </main>
+  </body>
+</html>
