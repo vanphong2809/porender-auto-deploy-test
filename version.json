@@ -1,5 +1,5 @@
 {
-  "version": "V1",
-  "message": "First deployment from GitHub",
+  "version": "V2",
+  "message": "Automatic deployment through ngrok",
   "healthy": true
 }
