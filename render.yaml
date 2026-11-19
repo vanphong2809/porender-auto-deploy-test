@@ -1,0 +1,27 @@
+# Commit this file with the starter source; review the plan before applying.
+services:
+  - type: web
+    name: starter-web
+    runtime: node
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /health
+    autoDeploy: false
+    x-porender:
+      port: 10000
+      memoryMiB: 256
+      cpu: 0.25
+      healthTimeoutSeconds: 60
+    envVars:
+      - key: APP_MESSAGE
+        sync: false
+      - key: DATABASE_URL
+        fromDatabase:
+          name: starter-db
+          property: connectionString
+databases:
+  - name: starter-db
+    postgresMajorVersion: "16"
+    databaseName: app
+    user: app
+    diskSizeGB: 1
